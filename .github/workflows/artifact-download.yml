@@ -45,5 +45,6 @@ jobs:
           name: artifact-test
           repository: actions-try/action-1
           github-token: ${{ secrets.GITHUB_TOKEN }}
+          run-id: 9881871252
       - name: Display structure of downloaded files
         run: ls -R
