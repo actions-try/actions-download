@@ -44,6 +44,6 @@ jobs:
         with:
           name: artifact-test
           repository: actions-try/action-1
-          github-token: ${{ secrets.GITHUB_TOKEN }}
+          github-token: ${{ secrets.GH_ACTIONS }}
       - name: Display structure of downloaded files
         run: ls -R
