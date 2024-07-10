@@ -34,7 +34,11 @@ jobs:
         run: |
           echo Add other actions to build,
           echo test, and deploy your project.
-      
+      - name: List all artifacts in source repository
+        run: |
+          curl -H "Authorization: token ${{ secrets.GITHUB_TOKEN }}" \
+          -H "Accept: application/vnd.github.v3+json" \
+          https://api.github.com/repos/actions-try/action-1/actions/artifacts
       - name: Download artifact
         uses: actions/download-artifact@v4
         with:
